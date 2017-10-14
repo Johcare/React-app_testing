@@ -1,0 +1,9 @@
+{
+"name": "react-app_testing",
+"describtion": "a simple reqact esting appt",
+"repository":"https://github.com/Johcare/React-app_testing",
+"keywords": ["node", "express", "heroku"],
+"image":"heroku/nodejs"
+
+}
+
