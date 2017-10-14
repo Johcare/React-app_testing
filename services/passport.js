@@ -33,8 +33,10 @@ passport.use(
       callbackURL: "/auth/google/callback"
     },
     (accessToken, refreshToken, profile, done) => {
+      
       //atemp to find a user, where google ID=profile.
       //this querry retern a promise, to get a signal, that process has completed
+
       User.findOne({ googleId: profile.id }).then(existingUser => {
         if (existingUser) {
           //we already have a record with the given profile ID
