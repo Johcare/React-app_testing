@@ -1,8 +1,12 @@
+//keys.js - figure out what type of cridentioals to return
 
-  module.exports = {
-      googleClientID: "964806699295-831rku0eet3jct59i0f7ju8s85g9u5k3.apps.googleusercontent.com",
-      googleClientSecret: "sfkEeHhyQY7Mge8qz3OXJUvu",
-      mongoURI: 'mongodb://zorro:12345@ds133281.mlab.com:33281/elka-pelka',
-      cookieKey:'wrtghtgrfedwefgrhtyjhgfdsfgrthjytgf'
-};
-    
+if (process.env.NODE_ENV === 'production') {
+  //we are in poduction - return the prod set of kys
+ module.exports = require('./prod');
+} else {
+  //we are in developing -return the dev keys!!!
+  //exporing and reaiuring -devFile- at thh same time
+module.exports = require('./dev');
+
+
+}
